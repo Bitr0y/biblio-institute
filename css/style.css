@@ -176,7 +176,7 @@ button {
 
 .menu__list {
     list-style: none;
-    display: flex;
+
 
 }
 
@@ -460,7 +460,9 @@ blockquote {
     padding: 13px 20px 13px 22px;
     position: relative;
 }
-
+.map {
+        height: 450px;
+    }
 .logo {
     /* padding-top: 1200px; */
     margin: 0 0 43px 0;
@@ -872,9 +874,9 @@ tr {
 
 
 
-    .header__menu .menu__list {
+    /* .header__menu .menu__list {
         transform: translateX(-100%);
-    }
+    } */
 
     .header__menu .menu__list li {
         font-size: 14px;
@@ -896,7 +898,7 @@ tr {
         max-height: calc(100vh - 157px);
         background-color: var(--white-color);
         z-index: 99;
-        transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1), - webkit-transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+        transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
         transform: translateX(-100%);
         overflow-y: auto;
         overflow-x: hidden;
@@ -905,23 +907,27 @@ tr {
         color: var(--brown-color);
     }
 
+    .menu-open .header__menu .header__menu__block {
+        transform: translateX(0%);
+  }
+
 
     .menu-open .header__menu .menu__burger span {
-    width: 0;
-    opacity: 0;
-  }
-  .menu-open .header__menu .menu__burger::before {
-    top: calc(50% - 1px);
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
-  .menu-open .header__menu .menu__burger::after {
-    bottom: calc(50% - 1px);
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
+        width: 0;
+        opacity: 0;
+    }
+    .menu-open .header__menu .menu__burger::before {
+        top: calc(50% - 1px);
+        -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+    }
+    .menu-open .header__menu .menu__burger::after {
+        bottom: calc(50% - 1px);
+        -webkit-transform: rotate(45deg);
+         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
-  }
+    }
 }
 
 
@@ -993,6 +999,10 @@ tr {
     .header__menu .menu__list li {
         max-width: 310px;
     }
+    .menu__list {
+        display: flex;
+
+}
 }
 
 
